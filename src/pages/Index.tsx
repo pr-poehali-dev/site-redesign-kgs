@@ -81,8 +81,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
-              <Icon name="Factory" className="text-accent" size={32} />
-              <span className="text-white font-heading text-xl font-bold">КГС</span>
+              <img 
+                src="https://cdn.poehali.dev/files/bad0729b-62e9-418a-b56c-b630705ebbf7.png"
+                alt="КГС Логотип"
+                className="h-12 w-auto"
+              />
             </div>
             
             <nav className="hidden md:flex items-center space-x-6">
@@ -437,8 +440,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Factory" className="text-accent" size={32} />
-                <span className="font-heading text-xl font-bold">КГС</span>
+                <img 
+                  src="https://cdn.poehali.dev/files/bad0729b-62e9-418a-b56c-b630705ebbf7.png"
+                  alt="КГС Логотип"
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="text-white/70 text-sm">
                 Производство и поставка оборудования для свайных фундаментов
