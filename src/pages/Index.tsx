@@ -100,7 +100,7 @@ const Index = () => {
               <a href="tel:88006007465" className="text-white hover:text-accent transition-colors text-sm font-medium hidden lg:block">
                 8 (800) 600-74-65
               </a>
-              <Button size="sm" className="bg-accent hover:bg-accent/90">
+              <Button size="sm" className="btn-gradient text-white">
                 Заказать звонок
               </Button>
             </div>
@@ -125,7 +125,7 @@ const Index = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-medium">
+                <Button size="lg" className="btn-gradient-reverse text-white font-medium">
                   Получить каталог
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
@@ -380,7 +380,7 @@ const Index = () => {
                     <label className="text-sm font-medium mb-2 block">Комментарий</label>
                     <Textarea placeholder="Расскажите о вашем проекте..." rows={4} />
                   </div>
-                  <Button className="w-full bg-accent hover:bg-accent/90" size="lg">
+                  <Button className="w-full btn-gradient-reverse text-white" size="lg">
                     Отправить заявку
                   </Button>
                 </form>
