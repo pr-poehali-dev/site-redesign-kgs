@@ -93,7 +93,7 @@ const Index = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <Link to="/about" className="text-white/90 hover:text-accent transition-colors text-sm">О компании</Link>
               <a href="#catalog" className="text-white/90 hover:text-accent transition-colors text-sm">Каталог</a>
-              <a href="#services" className="text-white/90 hover:text-accent transition-colors text-sm">Услуги</a>
+              <Link to="/services" className="text-white/90 hover:text-accent transition-colors text-sm">Услуги</Link>
               <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и логистика</Link>
               <a href="#" className="text-white/90 hover:text-accent transition-colors text-sm">Новости</a>
               <Link to="/contact" className="text-white/90 hover:text-accent transition-colors text-sm">Контакты</Link>
@@ -517,8 +517,8 @@ const Index = () => {
             <div>
               <h4 className="font-heading font-semibold mb-4">Услуги</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#services" className="hover:text-accent transition-colors">Шефмонтаж</a></li>
-                <li><a href="#services" className="hover:text-accent transition-colors">Сервис и ремонт</a></li>
+                <li><Link to="/services" className="hover:text-accent transition-colors">Шефмонтаж</Link></li>
+                <li><Link to="/services" className="hover:text-accent transition-colors">Сервис и ремонт</Link></li>
                 <li><a href="#services" className="hover:text-accent transition-colors">Инжиниринг</a></li>
                 <li><Link to="/production" className="hover:text-accent transition-colors">Производство</Link></li>
               </ul>
