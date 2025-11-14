@@ -204,6 +204,82 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Сертификаты и лицензии
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Наша деятельность подтверждена официальными документами
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Award" className="text-accent" size={32} />
+              </div>
+              <h3 className="font-heading font-semibold text-center mb-2">ISO 9001:2015</h3>
+              <p className="text-muted-foreground text-sm text-center">
+                Система менеджмента качества
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="FileCheck" className="text-accent" size={32} />
+              </div>
+              <h3 className="font-heading font-semibold text-center mb-2">Сертификат соответствия</h3>
+              <p className="text-muted-foreground text-sm text-center">
+                ТР ТС на производство оборудования
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="ShieldCheck" className="text-accent" size={32} />
+              </div>
+              <h3 className="font-heading font-semibold text-center mb-2">Декларация ТР ТС</h3>
+              <p className="text-muted-foreground text-sm text-center">
+                О безопасности машин и оборудования
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="BadgeCheck" className="text-accent" size={32} />
+              </div>
+              <h3 className="font-heading font-semibold text-center mb-2">Членство в СРО</h3>
+              <p className="text-muted-foreground text-sm text-center">
+                Проектирование и строительство
+              </p>
+            </Card>
+          </div>
+
+          <Card className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md flex-shrink-0">
+                <Icon name="FileText" className="text-primary" size={48} />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="font-heading font-semibold text-xl mb-2">
+                  Полный пакет документов
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Предоставляем все необходимые сертификаты, декларации соответствия, 
+                  паспорта на оборудование и инструкции на русском языке. 
+                  Помогаем с таможенным оформлением.
+                </p>
+                <Button className="btn-gradient text-white">
+                  Запросить документы
+                </Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               История развития
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
