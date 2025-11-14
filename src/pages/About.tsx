@@ -70,22 +70,28 @@ const About = () => {
 
   const team = [
     {
-      name: "Алексей Иванов",
+      name: "Евгений Анатольевич Селезнев",
       position: "Генеральный директор",
-      description: "Основатель компании, эксперт в области свайных технологий",
-      image: "https://cdn.poehali.dev/files/placeholder-team-1.jpg"
+      email: "info@kgs-ural.ru",
+      description: "Руководит стратегическим развитием компании и ключевыми направлениями бизнеса"
     },
     {
-      name: "Мария Петрова",
-      position: "Руководитель отдела продаж",
-      description: "Ответственна за работу с клиентами и развитие дилерской сети",
-      image: "https://cdn.poehali.dev/files/placeholder-team-2.jpg"
+      name: "Ольга Александровна Жирова",
+      position: "Исполнительный директор",
+      email: "zhirova@kgs-ural.ru",
+      description: "Отвечает за операционное управление и координацию всех подразделений компании"
     },
     {
-      name: "Дмитрий Сидоров",
-      position: "Главный инженер",
-      description: "Руководит технической поддержкой и шефмонтажными работами",
-      image: "https://cdn.poehali.dev/files/placeholder-team-3.jpg"
+      name: "Юлия Александровна Плюхина",
+      position: "Менеджер по продажам",
+      email: "sales2@kgs-ural.ru",
+      description: "Консультирует клиентов и подбирает оптимальные решения для проектов"
+    },
+    {
+      name: "Артур Фирдависович Муталлапов",
+      position: "Сервисный инженер",
+      email: "sales3@kgs-ural.ru",
+      description: "Обеспечивает техническую поддержку, диагностику и ремонт оборудования"
     }
   ];
 
@@ -379,6 +385,66 @@ const About = () => {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Наша деятельность подтверждена официальными документами
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
+              <div className="relative aspect-[4/3]">
+                <img 
+                  src="https://cdn.poehali.dev/files/5e0971fa-3d0b-4041-a860-aef1bb88b334.JPG"
+                  alt="Дилерский сертификат Dongtai Juli Machinery"
+                  className="w-full h-full object-contain bg-white"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-accent/10 p-2 rounded-lg flex-shrink-0">
+                    <Icon name="Award" className="text-accent" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold mb-2">Дилерский сертификат</h3>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Официальный дилер Dongtai Juli Machinery Manufacturing Co., Ltd
+                    </p>
+                    <div className="text-xs text-muted-foreground space-y-1">
+                      <p>• Право продажи дизельных свайных молотов и запчастей</p>
+                      <p>• Территория: вся Россия</p>
+                      <p>• Действителен до: 24 июня 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
+              <div className="relative aspect-[4/3]">
+                <img 
+                  src="https://cdn.poehali.dev/files/90b2ed09-d639-473d-9f73-cdc948b93674.jpg"
+                  alt="Сертификат дилера Dongtai Juli (русская версия)"
+                  className="w-full h-full object-contain bg-white"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-accent/10 p-2 rounded-lg flex-shrink-0">
+                    <Icon name="FileCheck" className="text-accent" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold mb-2">Сертификат дилера (русская версия)</h3>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Официальный дистрибьютор тайваньской Juli Machinery Manufacturing Co., Ltd
+                    </p>
+                    <div className="text-xs text-muted-foreground space-y-1">
+                      <p>• Право продажи направляющих стержней марки Juli</p>
+                      <p>• Дилерская сеть и принадлежности</p>
+                      <p>• Срок действия: до 24 июня 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -688,20 +754,44 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {team.map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="aspect-square bg-gradient-to-br from-primary to-accent/20 flex items-center justify-center">
-                  <Icon name="User" className="text-white/30" size={80} />
-                </div>
+              <Card key={index} className="hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-1">{member.name}</h3>
-                  <div className="text-accent text-sm font-medium mb-3">{member.position}</div>
-                  <p className="text-muted-foreground text-sm">{member.description}</p>
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-br from-primary to-accent/20 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="User" className="text-white" size={32} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading font-semibold text-lg mb-1">{member.name}</h3>
+                      <div className="text-accent text-sm font-medium mb-2">{member.position}</div>
+                      <p className="text-muted-foreground text-sm mb-3">{member.description}</p>
+                      <a 
+                        href={`mailto:${member.email}`}
+                        className="inline-flex items-center space-x-2 text-sm text-primary hover:text-accent transition-colors"
+                      >
+                        <Icon name="Mail" size={16} />
+                        <span>{member.email}</span>
+                      </a>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <Card className="mt-12 p-6 bg-gradient-to-br from-accent/5 to-primary/5 max-w-2xl mx-auto text-center">
+            <div className="flex items-center justify-center space-x-3 mb-3">
+              <Icon name="Mail" className="text-accent" size={24} />
+              <h3 className="font-heading font-semibold text-lg">По вопросам рекламы и сотрудничества</h3>
+            </div>
+            <a 
+              href="mailto:marketing@kgs-ural.ru"
+              className="text-primary hover:text-accent transition-colors font-medium"
+            >
+              marketing@kgs-ural.ru
+            </a>
+          </Card>
         </div>
       </section>
 
