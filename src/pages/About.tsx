@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const About = () => {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const milestones = [
     {
       year: "2013",
@@ -82,6 +84,63 @@ const About = () => {
     { value: "60+", label: "Шефмонтажей" },
     { value: "130+", label: "Единиц техники" },
     { value: "12+", label: "Лет опыта" }
+  ];
+
+  const projects = [
+    {
+      id: 1,
+      title: "Жилой комплекс «Новая высота», Москва",
+      description: "Поставка и шефмонтаж 3 сваебойных молотов для забивки свай под многоэтажный ЖК",
+      equipment: "Дизельные молоты DZJ-90",
+      duration: "2 месяца",
+      year: "2024",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/f641c2ee-f411-4bee-b2e9-96127d7fee2b.jpg"
+    },
+    {
+      id: 2,
+      title: "Завод по производству металлоконструкций, Екатеринбург",
+      description: "Комплексная поставка оборудования: буровая установка и копровые мачты",
+      equipment: "Буровая установка MD-750, 2 копровые мачты",
+      duration: "3 месяца",
+      year: "2023",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/d0357e51-fc69-4bd7-9feb-b9f4924208f0.jpg"
+    },
+    {
+      id: 3,
+      title: "Мост через реку Кама, Пермский край",
+      description: "Поставка вибропогружателей для монтажа свайных опор моста",
+      equipment: "Вибропогружатели ICE 44RF",
+      duration: "4 месяца",
+      year: "2023",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/409c5f64-ba5d-4fa6-ba0b-315c94eea0dc.jpg"
+    },
+    {
+      id: 4,
+      title: "Торговый центр, Санкт-Петербург",
+      description: "Шефмонтаж сваебойного оборудования на крупном объекте коммерческой недвижимости",
+      equipment: "Гидравлический молот BSP CX-500",
+      duration: "1.5 месяца",
+      year: "2024",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/f641c2ee-f411-4bee-b2e9-96127d7fee2b.jpg"
+    },
+    {
+      id: 5,
+      title: "Промышленный парк, Новосибирск",
+      description: "Изготовление нестандартных металлоконструкций на собственном производстве",
+      equipment: "Копровая мачта, наголовники, захваты",
+      duration: "2 месяца",
+      year: "2023",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/d0357e51-fc69-4bd7-9feb-b9f4924208f0.jpg"
+    },
+    {
+      id: 6,
+      title: "Нефтеперерабатывающий завод, Казахстан",
+      description: "Международная поставка буровой установки с полным таможенным сопровождением",
+      equipment: "Буровая установка BGS-85",
+      duration: "3 месяца",
+      year: "2022",
+      image: "https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/409c5f64-ba5d-4fa6-ba0b-315c94eea0dc.jpg"
+    }
   ];
 
   return (
@@ -277,6 +336,92 @@ const About = () => {
       </section>
 
       <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Наши проекты
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Примеры успешно реализованных поставок и шефмонтажей
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <Card 
+                key={project.id} 
+                className="overflow-hidden hover:shadow-xl transition-all cursor-pointer group"
+                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                  <Badge className="absolute top-3 right-3 bg-accent text-white border-0">
+                    {project.year}
+                  </Badge>
+                </div>
+                
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-semibold text-lg mb-2 line-clamp-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+                  
+                  {selectedProject === project.id && (
+                    <div className="space-y-3 animate-fade-in">
+                      <div className="flex items-start space-x-2">
+                        <Icon name="Package" className="text-accent flex-shrink-0 mt-1" size={16} />
+                        <div className="text-sm">
+                          <div className="font-medium">Оборудование:</div>
+                          <div className="text-muted-foreground">{project.equipment}</div>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <Icon name="Clock" className="text-accent flex-shrink-0 mt-1" size={16} />
+                        <div className="text-sm">
+                          <div className="font-medium">Срок выполнения:</div>
+                          <div className="text-muted-foreground">{project.duration}</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <Button 
+                    variant="ghost" 
+                    className="w-full mt-4 text-accent hover:text-accent/80 hover:bg-accent/10"
+                  >
+                    {selectedProject === project.id ? "Скрыть детали" : "Подробнее"}
+                    <Icon 
+                      name={selectedProject === project.id ? "ChevronUp" : "ChevronDown"} 
+                      size={16} 
+                      className="ml-2" 
+                    />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">
+              Более 60 успешно реализованных проектов по всей России и странам СНГ
+            </p>
+            <Link to="/#contact">
+              <Button className="btn-gradient-reverse text-white">
+                Обсудить ваш проект
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
