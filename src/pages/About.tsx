@@ -37,24 +37,34 @@ const About = () => {
 
   const values = [
     {
-      icon: "Shield",
-      title: "Надёжность",
-      description: "Гарантия на всё оборудование и качественный сервис"
+      icon: "ShieldCheck",
+      title: "Гарантия качества",
+      description: "Контроль выполнения заказа на каждом этапе. Оборудование поставляется напрямую с заводов с сертификатами качества"
     },
     {
-      icon: "Target",
-      title: "Профессионализм",
-      description: "Команда экспертов с 12+ летним опытом в отрасли"
+      icon: "DollarSign",
+      title: "Оптимальные цены",
+      description: "Прямые контракты с производителями позволяют предложить выгодные цены и полный цикл обслуживания"
     },
     {
-      icon: "Heart",
-      title: "Клиентоориентированность",
-      description: "Индивидуальный подход к каждому проекту"
+      icon: "Users",
+      title: "Индивидуальный подход",
+      description: "Каждый клиент получает решение, максимально соответствующее его требованиям и задачам"
     },
     {
-      icon: "TrendingUp",
-      title: "Развитие",
-      description: "Постоянное расширение ассортимента и услуг"
+      icon: "Package",
+      title: "Широкий ассортимент",
+      description: "Обширный выбор техники и комплектующих для сокращения сроков поставки"
+    },
+    {
+      icon: "Wrench",
+      title: "Техобслуживание",
+      description: "Ремонт и обслуживание европейского и китайского оборудования квалифицированными специалистами"
+    },
+    {
+      icon: "Award",
+      title: "Гарантия на оборудование",
+      description: "Гарантийное и постгарантийное обслуживание на всём сроке эксплуатации техники"
     }
   ];
 
@@ -182,14 +192,13 @@ const About = () => {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
-              С 2013 года
+              Более 12 лет на рынке
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-              О компании КоперГруппСервис
+              КГС — ваш эксперт в оборудовании и строительстве фундаментов
             </h1>
             <p className="text-white/80 text-lg leading-relaxed">
-              Мы специализируемся на производстве, поставке и обслуживании оборудования для свайных работ. 
-              За 12 лет работы стали надёжным партнёром для 350+ компаний по всей России и СНГ.
+              Торгово-производственная компания с более чем 12-летним опытом поставок, проектирования и реализации решений в сфере оборудования и фундаментостроения.
             </p>
           </div>
         </div>
@@ -208,18 +217,60 @@ const About = () => {
             ))}
           </div>
 
+          <div className="max-w-5xl mx-auto mb-16">
+            <Card className="p-8 md:p-12 bg-gradient-to-br from-white to-muted/30">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-center">
+                О компании КоперГруппСервис
+              </h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground">КоперГруппСервис</strong> — ваш надёжный партнёр в производстве и поставках оборудования для забивки свай и лидерного бурения. Мы изготавливаем копровые мачты кранового и экскаваторного типа, а также широкий ассортимент расходных и запасных частей: свайные наголовники для гидравлических и дизельных молотов, захваты молота по направляющим, крепления, шнеки и другие металлоконструкции по вашим чертежам.
+                </p>
+                <p>
+                  Мы поставляем только проверенное высококачественное оборудование из стран Азии и Европы, сотрудничая с известными мировыми производителями. За годы работы нам удалось выстроить долгосрочные и надёжные партнёрские отношения с лидерами отрасли.
+                </p>
+                <p>
+                  Помимо поставок техники, мы предлагаем <strong className="text-foreground">полный спектр профессиональных услуг:</strong>
+                </p>
+                <ul className="grid md:grid-cols-2 gap-3 ml-6">
+                  <li className="flex items-start space-x-2">
+                    <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                    <span>Конструкторские разработки для уникальных проектов</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                    <span>Техническое обслуживание и профилактику оборудования</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                    <span>Шефмонтаж на объекте</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                    <span>Диагностику и ремонт импортного и отечественного оборудования</span>
+                  </li>
+                </ul>
+                <p>
+                  Также мы поставляем запасные части для экскаваторов и строительной техники: гидромоторы, редукторы, насосы, распределители, клапаны, гидроцилиндры, гусеницы и многое другое — всё для того, чтобы ваша техника работала без простоев и максимально эффективно.
+                </p>
+              </div>
+            </Card>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Наша миссия
+                Миссия компании
               </h2>
-              <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-                Обеспечивать строительные компании надёжным и современным оборудованием для свайных работ, 
-                предоставляя комплексный сервис от поставки до технической поддержки.
+              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                Подбирать оптимальное оборудование и запчасти для надёжного, эффективного и своевременного решения ваших проектов.
               </p>
+              
+              <h3 className="text-2xl font-heading font-semibold mb-4">
+                Цель компании
+              </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Мы работаем напрямую с ведущими производителями Китая и развиваем собственное производство в Екатеринбурге, 
-                что позволяет предлагать конкурентные цены и гарантировать качество.
+                Обеспечивать российский и СНГ-рынки высококачественным оборудованием для строительства фундаментов по оптимальным ценам и выстраивать долгосрочные, взаимовыгодные отношения с клиентами.
               </p>
             </div>
             <div className="relative">
@@ -231,6 +282,32 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent rounded-lg"></div>
             </div>
           </div>
+
+          <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5">
+            <h3 className="text-2xl font-heading font-semibold mb-4 text-center">
+              Задачи компании
+            </h3>
+            <p className="text-muted-foreground mb-6 text-center">
+              Сопровождаем каждый этап работы и поставки оборудования заказчику:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "Обработка заявок и производство",
+                "Таможенная очистка и логистика",
+                "Доставка на объект заказчика",
+                "Шефмонтаж и ввод техники в эксплуатацию",
+                "Обучение операторов для качественного выполнения работ",
+                "Послепродажное обслуживание"
+              ].map((task, index) => (
+                <div key={index} className="flex items-start space-x-3 bg-white p-4 rounded-lg">
+                  <div className="bg-accent/10 p-2 rounded">
+                    <Icon name="CheckCircle2" className="text-accent" size={20} />
+                  </div>
+                  <span className="text-sm font-medium">{task}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -245,17 +322,51 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1">
                 <div className="bg-accent/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Icon name={value.icon} className="text-accent" size={24} />
                 </div>
                 <h3 className="font-heading font-semibold text-lg mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
               </Card>
             ))}
           </div>
+
+          <Card className="mt-12 p-8 bg-primary text-white max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="bg-white/10 p-6 rounded-lg flex-shrink-0">
+                <Icon name="Headphones" className="text-accent" size={48} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-heading font-bold mb-3">
+                  Послепродажное обслуживание
+                </h3>
+                <p className="text-white/90 mb-4">
+                  Мы заботимся о вашей технике на каждом этапе её эксплуатации
+                </p>
+                <ul className="space-y-2 text-sm text-white/80">
+                  <li className="flex items-start space-x-2">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-0.5" size={16} />
+                    <span><strong>Надёжный сервис</strong> — качественное обслуживание приобретённой техники</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-0.5" size={16} />
+                    <span><strong>Максимальная эффективность</strong> — расширение возможностей и настройка систем</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-0.5" size={16} />
+                    <span><strong>Снижение рисков</strong> — минимизация простоев и финансовых потерь</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-0.5" size={16} />
+                    <span><strong>Быстрая доступность</strong> — необходимые запчасти всегда в наличии</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -312,7 +423,7 @@ const About = () => {
             </Card>
           </div>
 
-          <Card className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 max-w-4xl mx-auto mt-12">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md flex-shrink-0">
                 <Icon name="FileText" className="text-primary" size={48} />
@@ -332,6 +443,109 @@ const About = () => {
               </div>
             </div>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Производственный цех
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Собственная производственная площадка в г. Берёзовский, Свердловская область
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="p-8">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-accent/10 p-3 rounded-lg">
+                  <Icon name="Factory" className="text-accent" size={32} />
+                </div>
+                <h3 className="text-2xl font-heading font-semibold">Производственные мощности</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground"><strong>Площадь цеха:</strong> 250 кв.м.</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Станок плазменной резки с ЧПУ 2,5 × 6,0 м</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Четыре сварочных поста (полуавтомат)</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Фрезерный станок с ЧПУ</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Токарный станок с ЧПУ</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Гибочный станок</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Кран-балка грузоподъёмностью 5 т</span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-accent/10 p-3 rounded-lg">
+                  <Icon name="Package" className="text-accent" size={32} />
+                </div>
+                <h3 className="text-2xl font-heading font-semibold">Склад запчастей</h3>
+              </div>
+              <p className="text-muted-foreground mb-6">
+                На складе всегда в наличии комплектующие для поставляемого оборудования, что обеспечивает:
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <Icon name="Zap" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Быстрый ремонт техники</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="Clock" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Минимизацию простоев</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Icon name="TrendingDown" className="text-accent flex-shrink-0 mt-1" size={18} />
+                  <span className="text-muted-foreground">Снижение затрат наших клиентов</span>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-accent/5 rounded-lg border border-accent/20">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="text-foreground">Изготавливаем:</strong> стандартные и индивидуальные металлоконструкции по вашим чертежам
+                </p>
+              </div>
+            </Card>
+          </div>
+
+          <div className="relative rounded-lg overflow-hidden h-[400px]">
+            <img 
+              src="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/d0357e51-fc69-4bd7-9feb-b9f4924208f0.jpg"
+              alt="Производственный цех КГС"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent flex items-end">
+              <div className="p-8 text-white">
+                <h3 className="text-2xl font-heading font-bold mb-2">
+                  Современное оборудование для качественного производства
+                </h3>
+                <p className="text-white/90">
+                  Оснащение цеха позволяет выполнять сложные производственные задачи любой сложности
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
