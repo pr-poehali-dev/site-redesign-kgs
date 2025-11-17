@@ -172,41 +172,47 @@ const Parts = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-primary to-primary/90 text-white shadow-xl">
-              <CardContent className="p-8 md:p-12">
-                <div className="text-center space-y-6">
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold">
-                    Свяжитесь с нами
-                  </h2>
-                  <p className="text-lg leading-relaxed text-white/90">
-                    Если у вас возникли вопросы или нужна помощь с выбором запчастей, свяжитесь с нами уже сегодня — наш менеджер подберёт оптимальное решение именно для вашей техники.
-                  </p>
-                  <p className="text-lg font-medium text-white/90">
-                    КоперГруппСервис — надёжный партнёр в обслуживании вашей техники.
-                  </p>
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                    <div className="flex items-center space-x-3">
-                      <Icon name="Phone" size={24} className="text-accent" />
-                      <div className="text-left">
-                        <p className="text-sm text-white/70">Горячая линия:</p>
-                        <a href="tel:88006007465" className="text-xl font-bold hover:text-accent transition-colors">
-                          8 (800) 600-74-65
-                        </a>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Icon name="Mail" size={24} className="text-accent" />
-                      <div className="text-left">
-                        <p className="text-sm text-white/70">E-mail:</p>
-                        <a href="mailto:info@kgs-ural.ru" className="text-xl font-bold hover:text-accent transition-colors">
-                          info@kgs-ural.ru
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">
+                Свяжитесь с нами
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+                Если у вас возникли вопросы или нужна помощь с выбором запчастей, свяжитесь с нами уже сегодня — наш менеджер подберёт оптимальное решение именно для вашей техники.
+              </p>
+              <p className="text-lg font-medium text-muted-foreground">
+                КоперГруппСервис — надёжный партнёр в обслуживании вашей техники.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-8 rounded-lg border-l-4 border-accent text-center">
+                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Phone" size={32} className="text-accent" />
                 </div>
-              </CardContent>
-            </Card>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Горячая линия</h3>
+                <a href="tel:88006007465" className="text-2xl font-bold text-accent hover:text-accent/80 transition-colors block mb-2">
+                  8 (800) 600-74-65
+                </a>
+                <p className="text-sm text-muted-foreground mb-4">Звонок по России бесплатный</p>
+                <Button size="lg" className="btn-gradient text-white w-full">
+                  Заказать звонок
+                </Button>
+              </div>
+
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-lg border-l-4 border-primary text-center">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Mail" size={32} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">Email</h3>
+                <a href="mailto:info@kgs-ural.ru" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors block mb-2">
+                  info@kgs-ural.ru
+                </a>
+                <p className="text-sm text-muted-foreground mb-4">Ответим в течение 1 часа</p>
+                <Button size="lg" className="btn-gradient-reverse text-white w-full">
+                  Написать письмо
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -349,7 +355,7 @@ const Parts = () => {
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-white/70 hover:text-accent transition-colors">О нас</Link></li>
                 <li><Link to="/services" className="text-white/70 hover:text-accent transition-colors">Услуги</Link></li>
-                <li><Link to="/production" className="text-white/70 hover:text-accent transition-colors">Производство</Link></li>
+                <li><Link to="/production" className="text-white/70 hover:text-accent transition-colors">Производство и доставка</Link></li>
                 <li><a href="#" className="text-white/70 hover:text-accent transition-colors">Новости</a></li>
               </ul>
             </div>

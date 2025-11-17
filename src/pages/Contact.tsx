@@ -346,7 +346,7 @@ const Contact = () => {
                 <li><Link to="/services" className="hover:text-accent transition-colors">Шефмонтаж</Link></li>
                 <li><Link to="/services" className="hover:text-accent transition-colors">Сервис и ремонт</Link></li>
                 <li><a href="/#services" className="hover:text-accent transition-colors">Инжиниринг</a></li>
-                <li><Link to="/production" className="hover:text-accent transition-colors">Производство</Link></li>
+                <li><Link to="/production" className="hover:text-accent transition-colors">Производство и доставка</Link></li>
               </ul>
             </div>
 

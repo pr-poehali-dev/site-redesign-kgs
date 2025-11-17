@@ -183,11 +183,11 @@ const Catalog = () => {
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
               Каталог оборудования
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-              Оборудование для свайных работ
+<h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+              Каталог оборудования
             </h1>
             <p className="text-white/80 text-lg leading-relaxed">
-              Полный каталог современного оборудования от ведущих мировых производителей. Официальные представители JULI, STARKE, YONGAN в России.
+              ООО «КГС» — лидер рынка в сфере поставок современного оборудования и техники для строительства свайных фундаментов на территории России и стран СНГ
             </p>
           </div>
         </div>
@@ -250,21 +250,100 @@ const Catalog = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-primary to-accent/20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-            Не нашли нужное оборудование?
-          </h2>
-          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-            Свяжитесь с нашими специалистами — мы поможем подобрать оптимальное решение для вашего проекта
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-              Получить консультацию
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Заказать обратный звонок
-            </Button>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center text-primary">
+              Наш ассортимент
+            </h2>
+            
+            <div className="space-y-3 mb-8 text-muted-foreground">
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Свайные молоты различных типов (гидравлические, дизельные штанговые и трубчатые)</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Вибропогружатели крановые (с нормальной частотой и вариабельные, гидравлические и электрические)</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Экскаваторные вибропогружатели с гуськом и боковым зажимом</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Копровые мачты кранового типа для молотов и бурового вращателя</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Сваебойные машины (копры)</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Машины статического вдавливания (сваевдавливающие)</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Буровые машины</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Сваескусыватели</span>
+              </p>
+              <p className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span>Свайные наголовники</span>
+              </p>
+            </div>
+
+            <h3 className="text-2xl font-heading font-bold mb-6 text-primary">
+              Комплексное обслуживание от нашей компании включает:
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-4 mb-12">
+              <div className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span className="text-muted-foreground">Профессиональные консультации по подбору оборудования и техники</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span className="text-muted-foreground">Организацию доставки любым удобным способом до строительной площадки заказчика</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span className="text-muted-foreground">Полное таможенное оформление грузов</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span className="text-muted-foreground">Шефмонтажные работы непосредственно на объекте</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
+                <span className="text-muted-foreground">Сервисное обслуживание и обеспечение запасными частями</span>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-center text-lg mb-8">
+              Мы предлагаем полный цикл услуг под ключ, обеспечивая наших клиентов всем необходимым для успешной реализации строительных проектов.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-8 rounded-lg border-l-4 border-accent text-center">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-primary">Получить каталог</h3>
+                <p className="text-muted-foreground mb-6">Полный каталог оборудования с техническими характеристиками и ценами</p>
+                <Button size="lg" className="btn-gradient text-white w-full">
+                  Скачать каталог
+                </Button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-lg border-l-4 border-primary text-center">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-primary">Консультация специалиста</h3>
+                <p className="text-muted-foreground mb-6">Поможем подобрать оптимальное решение для вашего проекта</p>
+                <Button size="lg" className="btn-gradient-reverse text-white w-full">
+                  Получить консультацию
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

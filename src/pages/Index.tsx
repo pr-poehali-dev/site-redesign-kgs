@@ -195,8 +195,8 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">О компании КГС</h2>
             <p className="text-muted-foreground text-lg">
-              Мы — команда профессионалов с опытом более 12 лет в фундаментостроении. 
-              С 2014 года поставляем и производим оборудование для забивки свай и лидерного бурения.
+              Мы — команда профессионалов с опытом более 10 лет в фундаментостроении. 
+              С 2016 года поставляем и производим оборудование для забивки свай и лидерного бурения.
             </p>
           </div>
 
@@ -531,7 +531,7 @@ const Index = () => {
                 <li><Link to="/services" className="hover:text-accent transition-colors">Шефмонтаж</Link></li>
                 <li><Link to="/services" className="hover:text-accent transition-colors">Сервис и ремонт</Link></li>
                 <li><a href="#services" className="hover:text-accent transition-colors">Инжиниринг</a></li>
-                <li><Link to="/production" className="hover:text-accent transition-colors">Производство</Link></li>
+                <li><Link to="/production" className="hover:text-accent transition-colors">Производство и доставка</Link></li>
               </ul>
             </div>
 

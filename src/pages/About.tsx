@@ -5,6 +5,7 @@ import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ConsultationButton } from "@/components/ConsultationButton";
 
 const About = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -766,44 +767,53 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              История развития
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Ключевые вехи нашего пути
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-accent/30 hidden md:block"></div>
-              
-              <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={index} className="relative pl-0 md:pl-20">
-                    <div className="absolute left-0 top-0 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold hidden md:flex">
-                      {milestone.year}
-                    </div>
-                    
-                    <Card className="p-6 hover:shadow-lg transition-shadow">
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-accent/10 p-3 rounded-lg flex-shrink-0">
-                          <Icon name="Calendar" className="text-accent" size={24} />
-                        </div>
-                        <div>
-                          <div className="text-accent font-semibold mb-1 md:hidden">{milestone.year}</div>
-                          <h3 className="font-heading font-semibold text-lg mb-2">{milestone.title}</h3>
-                          <p className="text-muted-foreground">{milestone.description}</p>
-                        </div>
-                      </div>
-                    </Card>
-                  </div>
-                ))}
+          <div className="max-w-5xl mx-auto">
+            <Card className="p-8 md:p-12">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">
+                  Работаем по всей России
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  Поставим оборудование и запчасти в любой город России
+                </p>
               </div>
-            </div>
+
+              <div className="relative aspect-[3/2] md:aspect-[16/9] mb-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg overflow-hidden">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Map_of_Russia_-_Russian_Federation.svg/2560px-Map_of_Russia_-_Russian_Federation.svg.png"
+                  alt="Карта России - география работы КГС"
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center p-4 bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg">
+                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Icon name="Truck" className="text-accent" size={24} />
+                  </div>
+                  <h3 className="font-heading font-semibold mb-2">Доставка по РФ</h3>
+                  <p className="text-sm text-muted-foreground">ЖД, авто и морским транспортом</p>
+                </div>
+
+                <div className="text-center p-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg">
+                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Icon name="Wrench" className="text-accent" size={24} />
+                  </div>
+                  <h3 className="font-heading font-semibold mb-2">Шефмонтаж на объекте</h3>
+                  <p className="text-sm text-muted-foreground">Выезд специалистов в любой регион</p>
+                </div>
+
+                <div className="text-center p-4 bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg">
+                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Icon name="Package" className="text-accent" size={24} />
+                  </div>
+                  <h3 className="font-heading font-semibold mb-2">Запчасти в наличии</h3>
+                  <p className="text-sm text-muted-foreground">Оперативная отправка по России</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -845,7 +855,11 @@ const About = () => {
             ))}
           </div>
 
-          <Card className="mt-12 p-6 bg-gradient-to-br from-accent/5 to-primary/5 max-w-2xl mx-auto text-center">
+          <div className="mt-12 text-center">
+            <ConsultationButton size="lg" />
+          </div>
+          
+          <Card className="mt-8 p-6 bg-gradient-to-br from-accent/5 to-primary/5 max-w-2xl mx-auto text-center">
             <div className="flex items-center justify-center space-x-3 mb-3">
               <Icon name="Mail" className="text-accent" size={24} />
               <h3 className="font-heading font-semibold text-lg">По вопросам рекламы и сотрудничества</h3>
@@ -1179,7 +1193,7 @@ const About = () => {
                 <li><Link to="/services" className="hover:text-accent transition-colors">Шефмонтаж</Link></li>
                 <li><Link to="/services" className="hover:text-accent transition-colors">Сервис и ремонт</Link></li>
                 <li><a href="/#services" className="hover:text-accent transition-colors">Инжиниринг</a></li>
-                <li><Link to="/production" className="hover:text-accent transition-colors">Производство</Link></li>
+                <li><Link to="/production" className="hover:text-accent transition-colors">Производство и доставка</Link></li>
               </ul>
             </div>
 

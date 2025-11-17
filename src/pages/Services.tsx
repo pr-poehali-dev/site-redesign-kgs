@@ -427,7 +427,7 @@ const Services = () => {
                 <li><a href="#supervision" className="hover:text-accent transition-colors">Шефмонтаж</a></li>
                 <li><a href="#maintenance" className="hover:text-accent transition-colors">Сервис и ремонт</a></li>
                 <li><a href="#guarantee" className="hover:text-accent transition-colors">Гарантия</a></li>
-                <li><Link to="/production" className="hover:text-accent transition-colors">Производство</Link></li>
+                <li><Link to="/production" className="hover:text-accent transition-colors">Производство и доставка</Link></li>
               </ul>
             </div>
 
