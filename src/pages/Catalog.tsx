@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Catalog = () => {
   const categories = [
@@ -92,6 +93,7 @@ const Catalog = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -147,15 +149,15 @@ const Catalog = () => {
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
               Полный каталог
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 md:mb-6 leading-tight">
               Каталог оборудования
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
               Широкий ассортимент техники для строительства свайных фундаментов от ведущих производителей
             </p>
             
-            <a href="#contact">
-              <Button size="lg" className="btn-gradient-reverse text-white font-medium shadow-xl">
+            <a href="#contact" className="block sm:inline-block">
+              <Button size="lg" className="btn-gradient-reverse text-white font-medium shadow-xl w-full sm:w-auto">
                 <Icon name="Download" className="mr-2" size={20} />
                 Получить каталог
               </Button>
@@ -164,14 +166,14 @@ const Catalog = () => {
         </div>
       </section>
 
-      <section className="py-8 bg-muted/30">
+      <section className="py-6 md:py-8 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {categories.map((category) => (
               <a 
                 key={category.id}
                 href={`#${category.id}`}
-                className="bg-white hover:bg-accent/10 border border-primary/20 hover:border-accent text-primary hover:text-accent px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md"
+                className="bg-white hover:bg-accent/10 border border-primary/20 hover:border-accent text-primary hover:text-accent px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-all text-xs md:text-sm font-medium shadow-sm hover:shadow-md"
               >
                 {category.title}
               </a>
@@ -183,21 +185,21 @@ const Catalog = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           {categories.map((category, categoryIndex) => (
-            <div key={category.id} id={category.id} className={`mb-16 ${categoryIndex !== 0 ? 'pt-16 border-t' : ''}`}>
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
+            <div key={category.id} id={category.id} className={`mb-12 md:mb-16 ${categoryIndex !== 0 ? 'pt-12 md:pt-16 border-t' : ''}`}>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 md:mb-8">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                   {category.title}
                 </h2>
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white text-sm md:text-base w-full sm:w-auto">
                   Подробнее
-                  <Icon name="ArrowRight" className="ml-2" size={18} />
+                  <Icon name="ArrowRight" className="ml-2" size={16} />
                 </Button>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {category.items.map((item, itemIndex) => (
                   <Card key={itemIndex} className="overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-40 md:h-48 overflow-hidden">
                       <img 
                         src={category.image}
                         alt={item.name}
@@ -205,17 +207,17 @@ const Catalog = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-heading font-semibold text-lg mb-2 line-clamp-2">{item.name}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                    <CardContent className="p-4 md:p-6">
+                      <h3 className="font-heading font-semibold text-base md:text-lg mb-2 line-clamp-2">{item.name}</h3>
+                      <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-4">{item.description}</p>
                       <div className="flex gap-2">
                         <a href="#contact" className="flex-1">
-                          <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white text-sm">
+                          <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white text-xs md:text-sm">
                             Подробнее
                           </Button>
                         </a>
                         <a href="#contact" className="flex-1">
-                          <Button className="w-full btn-gradient text-white text-sm">
+                          <Button className="w-full btn-gradient text-white text-xs md:text-sm">
                             Запросить цену
                           </Button>
                         </a>
@@ -229,26 +231,26 @@ const Catalog = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-muted/30">
+      <section id="contact" className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Получите консультацию</h2>
-              <p className="text-muted-foreground text-lg">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-3 md:mb-4">Получите консультацию</h2>
+              <p className="text-muted-foreground text-base md:text-lg">
                 Оставьте заявку, и наш специалист свяжется с вами в ближайшее время
               </p>
             </div>
 
-            <Card className="p-8">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-4 md:p-6 lg:p-8">
+              <form className="space-y-4 md:space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label className="text-sm font-medium mb-2 block">Ваше имя *</label>
                     <input 
                       type="text" 
                       required
                       placeholder="Иван Иванов"
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-base"
                     />
                   </div>
                   <div>
@@ -257,7 +259,7 @@ const Catalog = () => {
                       type="tel" 
                       required
                       placeholder="+7 (___) ___-__-__"
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-base"
                     />
                   </div>
                 </div>
@@ -274,7 +276,7 @@ const Catalog = () => {
                   <textarea 
                     rows={4}
                     placeholder="Расскажите о вашем проекте или интересующем оборудовании..."
-                    className="w-full px-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                    className="w-full px-3 md:px-4 py-2 md:py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-accent resize-none text-base"
                   />
                 </div>
                 <div className="flex items-start space-x-3">

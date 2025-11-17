@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   const equipment = [
@@ -80,6 +81,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -144,38 +146,38 @@ const Index = () => {
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
                 10+ лет на рынке
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 md:mb-6 leading-tight">
                 Оборудование для свайных фундаментов
               </h1>
-              <p className="text-white/80 text-lg mb-6 leading-relaxed">
+              <p className="text-white/80 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
                 Производство, поставка и сервис. Прямые поставки с заводов Китая и собственное производство в Екатеринбурге.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <a href="#contact">
-                  <Button size="lg" className="btn-gradient-reverse text-white font-medium">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8">
+                <a href="#contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="btn-gradient-reverse text-white font-medium w-full sm:w-auto">
                     Получить каталог
                   </Button>
                 </a>
-                <a href="#contact">
-                  <Button size="lg" className="btn-gradient-reverse text-white font-medium">
+                <a href="#contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="btn-gradient-reverse text-white font-medium w-full sm:w-auto">
                     Запросить консультацию
                   </Button>
                 </a>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={20} />
-                  <span className="text-white/90 text-sm">350+ клиентов</span>
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={18} />
+                  <span className="text-white/90 text-xs sm:text-sm">350+ клиентов</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={20} />
-                  <span className="text-white/90 text-sm">Прямые поставки</span>
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={18} />
+                  <span className="text-white/90 text-xs sm:text-sm">Прямые поставки</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={20} />
-                  <span className="text-white/90 text-sm">Своё производство</span>
+                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0" size={18} />
+                  <span className="text-white/90 text-xs sm:text-sm">Своё производство</span>
                 </div>
               </div>
             </div>
@@ -194,13 +196,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-muted/30 border-y">
+      <section className="py-8 md:py-12 bg-muted/30 border-y">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="text-3xl md:text-4xl font-heading font-bold text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-accent mb-1 md:mb-2">{stat.value}</div>
+                <div className="text-xs md:text-sm text-muted-foreground leading-tight">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -209,9 +211,9 @@ const Index = () => {
 
       <section id="about" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">О компании КГС</h2>
-            <p className="text-muted-foreground text-lg">
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-3 md:mb-4">О компании КГС</h2>
+            <p className="text-muted-foreground text-base md:text-lg">
               Мы — команда профессионалов с опытом более 10 лет в фундаментостроении. 
               С 2016 года поставляем и производим оборудование для забивки свай и лидерного бурения.
             </p>
@@ -264,9 +266,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <Link to="/about">
-              <Button size="lg" className="btn-gradient-reverse text-white font-medium">
+              <Button size="lg" className="btn-gradient-reverse text-white font-medium w-full sm:w-auto">
                 Подробнее о компании
                 <Icon name="ArrowRight" className="ml-2" size={18} />
               </Button>
@@ -277,14 +279,14 @@ const Index = () => {
 
       <section id="catalog" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Каталог оборудования</h2>
-            <p className="text-muted-foreground text-lg">
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-3 md:mb-4">Каталог оборудования</h2>
+            <p className="text-muted-foreground text-base md:text-lg">
               Широкий ассортимент техники для строительства свайных фундаментов
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {equipment.map((item) => (
               <Card key={item.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-48 overflow-hidden">
@@ -295,9 +297,9 @@ const Index = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-xl mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground mb-4">{item.description}</p>
+                <CardContent className="p-4 md:p-6">
+                  <h3 className="font-heading font-semibold text-lg md:text-xl mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base mb-4">{item.description}</p>
                   <Link to="/catalog">
                     <Button variant="outline" className="w-full group/btn border-accent text-accent hover:bg-accent hover:text-white">
                       Подробнее
@@ -309,9 +311,9 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link to="/catalog">
-              <Button size="lg" className="bg-accent hover:bg-accent/90">
+          <div className="text-center mt-8 md:mt-12">
+            <Link to="/catalog" className="block sm:inline-block">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 w-full sm:w-auto">
                 Полный каталог оборудования
               </Button>
             </Link>
@@ -409,15 +411,15 @@ const Index = () => {
       <section id="contact" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Получите консультацию</h2>
-              <p className="text-muted-foreground text-lg">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-3 md:mb-4">Получите консультацию</h2>
+              <p className="text-muted-foreground text-base md:text-lg">
                 Оставьте заявку, и наш специалист свяжется с вами в ближайшее время
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <Card className="p-4 md:p-6">
                 <form className="space-y-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">Ваше имя</label>
@@ -453,8 +455,8 @@ const Index = () => {
                 </form>
               </Card>
 
-              <div className="space-y-6">
-                <Card className="p-6">
+              <div className="space-y-4 md:space-y-6">
+                <Card className="p-4 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-accent/10 p-3 rounded-lg">
                       <Icon name="Phone" className="text-accent" size={24} />
@@ -522,25 +524,25 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-white py-12">
+      <footer className="bg-primary text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center space-x-2 mb-3 md:mb-4">
                 <img 
                   src="https://cdn.poehali.dev/files/e8940fa1-9132-49b3-bf7b-93d6cc15b33f.png"
                   alt="КГС Логотип"
-                  className="h-16 w-auto"
+                  className="h-12 md:h-16 w-auto"
                 />
               </div>
-              <p className="text-white/70 text-sm">
+              <p className="text-white/70 text-xs md:text-sm">
                 Производство и поставка оборудования для свайных фундаментов
               </p>
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold mb-4">Каталог</h4>
-              <ul className="space-y-2 text-sm text-white/70">
+              <h4 className="font-heading font-semibold mb-3 md:mb-4 text-sm md:text-base">Каталог</h4>
+              <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-white/70">
                 <li><a href="#" className="hover:text-accent transition-colors">Сваебойные молоты</a></li>
                 <li><a href="#" className="hover:text-accent transition-colors">Буровые установки</a></li>
                 <li><a href="#" className="hover:text-accent transition-colors">Копровые мачты</a></li>
