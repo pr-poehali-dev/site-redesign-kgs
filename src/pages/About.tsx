@@ -100,7 +100,7 @@ const About = () => {
     { value: "350+", label: "Клиентов" },
     { value: "60+", label: "Шефмонтажей" },
     { value: "130+", label: "Единиц техники" },
-    { value: "12+", label: "Лет опыта" }
+    { value: "10+", label: "Лет опыта" }
   ];
 
   const projects = [
@@ -174,11 +174,11 @@ const About = () => {
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
-              <Link to="/" className="text-white/90 hover:text-accent transition-colors text-sm">Главная</Link>
               <Link to="/about" className="text-accent transition-colors text-sm font-medium">О компании</Link>
               <a href="/#catalog" className="text-white/90 hover:text-accent transition-colors text-sm">Каталог</a>
+              <Link to="/parts" className="text-white/90 hover:text-accent transition-colors text-sm">Запчасти</Link>
               <Link to="/services" className="text-white/90 hover:text-accent transition-colors text-sm">Услуги</Link>
-              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и логистика</Link>
+              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и доставка</Link>
               <a href="#" className="text-white/90 hover:text-accent transition-colors text-sm">Новости</a>
               <Link to="/contact" className="text-white/90 hover:text-accent transition-colors text-sm">Контакты</Link>
             </nav>
@@ -269,14 +269,14 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+              <h2 className="text-3xl font-heading font-bold mb-6">
                 Миссия компании
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Подбирать оптимальное оборудование и запчасти для надёжного, эффективного и своевременного решения ваших проектов.
               </p>
               
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-3xl font-heading font-bold mb-6">
                 Цель компании
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
@@ -294,7 +294,7 @@ const About = () => {
           </div>
 
           <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5">
-            <h3 className="text-2xl font-heading font-semibold mb-4 text-center">
+            <h3 className="text-3xl font-heading font-bold mb-4 text-center">
               Задачи компании
             </h3>
             <p className="text-muted-foreground mb-6 text-center">
@@ -1108,7 +1108,7 @@ const About = () => {
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Сваебойные молоты</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Буровые установки</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Копровые мачты</a></li>
-                <li><a href="/#catalog" className="hover:text-accent transition-colors">Запасные части</a></li>
+                <li><Link to="/parts" className="hover:text-accent transition-colors">Запчасти</Link></li>
               </ul>
             </div>
 
@@ -1127,6 +1127,7 @@ const About = () => {
               <ul className="space-y-2 text-sm text-white/70">
                 <li><Link to="/about" className="hover:text-accent transition-colors">О нас</Link></li>
                 <li><Link to="/contact" className="hover:text-accent transition-colors">Контакты</Link></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Новости</a></li>
               </ul>
             </div>
           </div>

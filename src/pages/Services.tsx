@@ -53,11 +53,11 @@ const Services = () => {
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
-              <Link to="/" className="text-white/90 hover:text-accent transition-colors text-sm">Главная</Link>
               <Link to="/about" className="text-white/90 hover:text-accent transition-colors text-sm">О компании</Link>
               <a href="/#catalog" className="text-white/90 hover:text-accent transition-colors text-sm">Каталог</a>
+              <Link to="/parts" className="text-white/90 hover:text-accent transition-colors text-sm">Запчасти</Link>
               <Link to="/services" className="text-accent transition-colors text-sm font-medium">Услуги</Link>
-              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и логистика</Link>
+              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и доставка</Link>
               <a href="#" className="text-white/90 hover:text-accent transition-colors text-sm">Новости</a>
               <Link to="/contact" className="text-white/90 hover:text-accent transition-colors text-sm">Контакты</Link>
             </nav>
@@ -417,7 +417,7 @@ const Services = () => {
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Сваебойные молоты</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Буровые установки</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Копровые мачты</a></li>
-                <li><a href="/#catalog" className="hover:text-accent transition-colors">Запасные части</a></li>
+                <li><Link to="/parts" className="hover:text-accent transition-colors">Запчасти</Link></li>
               </ul>
             </div>
 
@@ -436,6 +436,7 @@ const Services = () => {
               <ul className="space-y-2 text-sm text-white/70">
                 <li><Link to="/about" className="hover:text-accent transition-colors">О нас</Link></li>
                 <li><Link to="/contact" className="hover:text-accent transition-colors">Контакты</Link></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Новости</a></li>
               </ul>
             </div>
           </div>

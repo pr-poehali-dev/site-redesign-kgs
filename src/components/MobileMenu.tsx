@@ -14,11 +14,12 @@ export const MobileMenu = ({ currentPath = '' }: MobileMenuProps) => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
-    { to: '/', label: 'Главная' },
     { to: '/about', label: 'О компании' },
     { to: '/#catalog', label: 'Каталог' },
+    { to: '/parts', label: 'Запчасти' },
     { to: '/services', label: 'Услуги' },
-    { to: '/production', label: 'Производство и логистика' },
+    { to: '/production', label: 'Производство и доставка' },
+    { to: '#', label: 'Новости' },
     { to: '/contact', label: 'Контакты' },
   ];
 

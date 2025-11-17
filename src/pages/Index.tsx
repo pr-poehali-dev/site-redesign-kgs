@@ -74,7 +74,7 @@ const Index = () => {
   const stats = [
     { value: "350+", label: "Клиентов по России и СНГ" },
     { value: "60+", label: "Выполненных шефмонтажей" },
-    { value: "12+", label: "Лет опыта команды" },
+    { value: "10+", label: "Лет опыта команды" },
     { value: "130+", label: "Единиц поставленной техники" }
   ];
 
@@ -94,8 +94,9 @@ const Index = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <Link to="/about" className="text-white/90 hover:text-accent transition-colors text-sm">О компании</Link>
               <a href="#catalog" className="text-white/90 hover:text-accent transition-colors text-sm">Каталог</a>
+              <Link to="/parts" className="text-white/90 hover:text-accent transition-colors text-sm">Запчасти</Link>
               <Link to="/services" className="text-white/90 hover:text-accent transition-colors text-sm">Услуги</Link>
-              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и логистика</Link>
+              <Link to="/production" className="text-white/90 hover:text-accent transition-colors text-sm">Производство и доставка</Link>
               <a href="#" className="text-white/90 hover:text-accent transition-colors text-sm">Новости</a>
               <Link to="/contact" className="text-white/90 hover:text-accent transition-colors text-sm">Контакты</Link>
             </nav>
@@ -159,7 +160,7 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/f641c2ee-f411-4bee-b2e9-96127d7fee2b.jpg"
                   alt="Оборудование для свайных работ"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[500px] object-cover animate-subtle-zoom"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               </div>
@@ -512,7 +513,7 @@ const Index = () => {
                 <li><a href="#" className="hover:text-accent transition-colors">Сваебойные молоты</a></li>
                 <li><a href="#" className="hover:text-accent transition-colors">Буровые установки</a></li>
                 <li><a href="#" className="hover:text-accent transition-colors">Копровые мачты</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Запасные части</a></li>
+                <li><Link to="/parts" className="hover:text-accent transition-colors">Запчасти</Link></li>
               </ul>
             </div>
 
@@ -532,7 +533,7 @@ const Index = () => {
                 <li><Link to="/about" className="hover:text-accent transition-colors">О нас</Link></li>
                 <li><a href="#" className="hover:text-accent transition-colors">Доставка</a></li>
                 <li><Link to="/contact" className="hover:text-accent transition-colors">Контакты</Link></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Реквизиты</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Новости</a></li>
               </ul>
             </div>
           </div>

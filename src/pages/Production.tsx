@@ -131,11 +131,11 @@ const Production = () => {
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
-              <Link to="/" className="text-white/90 hover:text-accent transition-colors text-sm">Главная</Link>
               <Link to="/about" className="text-white/90 hover:text-accent transition-colors text-sm">О компании</Link>
               <a href="/#catalog" className="text-white/90 hover:text-accent transition-colors text-sm">Каталог</a>
+              <Link to="/parts" className="text-white/90 hover:text-accent transition-colors text-sm">Запчасти</Link>
               <Link to="/services" className="text-white/90 hover:text-accent transition-colors text-sm">Услуги</Link>
-              <Link to="/production" className="text-accent transition-colors text-sm font-medium">Производство и логистика</Link>
+              <Link to="/production" className="text-accent transition-colors text-sm font-medium">Производство и доставка</Link>
               <a href="#" className="text-white/90 hover:text-accent transition-colors text-sm">Новости</a>
               <Link to="/contact" className="text-white/90 hover:text-accent transition-colors text-sm">Контакты</Link>
             </nav>
@@ -164,14 +164,35 @@ const Production = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
               Производство и доставка
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed mb-8">
               Полный цикл производства навесного оборудования и организация доставки по всей России
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              <a href="#production-cycle" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Полный цикл производства
+              </a>
+              <a href="#rvd" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Рукава высокого давления
+              </a>
+              <a href="#masts" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Копровые мачты
+              </a>
+              <a href="#modernization" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Модернизация техники
+              </a>
+              <a href="#engineering" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Проектирование
+              </a>
+              <a href="#delivery" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
+                Доставка
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section id="production-cycle" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-center">
@@ -237,7 +258,7 @@ const Production = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section id="rvd" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
@@ -277,7 +298,7 @@ const Production = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div id="masts" className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1 relative">
                 <img 
                   src="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/409c5f64-ba5d-4fa6-ba0b-315c94eea0dc.jpg"
@@ -319,7 +340,7 @@ const Production = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section id="modernization" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -368,7 +389,7 @@ const Production = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section id="engineering" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -447,7 +468,7 @@ const Production = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section id="delivery" className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -529,7 +550,7 @@ const Production = () => {
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Сваебойные молоты</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Буровые установки</a></li>
                 <li><a href="/#catalog" className="hover:text-accent transition-colors">Копровые мачты</a></li>
-                <li><a href="/#catalog" className="hover:text-accent transition-colors">Запасные части</a></li>
+                <li><Link to="/parts" className="hover:text-accent transition-colors">Запчасти</Link></li>
               </ul>
             </div>
 
@@ -548,6 +569,7 @@ const Production = () => {
               <ul className="space-y-2 text-sm text-white/70">
                 <li><Link to="/about" className="hover:text-accent transition-colors">О нас</Link></li>
                 <li><Link to="/contact" className="hover:text-accent transition-colors">Контакты</Link></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Новости</a></li>
               </ul>
             </div>
           </div>
