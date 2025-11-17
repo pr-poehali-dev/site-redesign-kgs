@@ -140,7 +140,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in relative z-10">
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
-                12+ лет на рынке
+                10+ лет на рынке
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Оборудование для свайных фундаментов
@@ -558,7 +558,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 mb-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
               <p>© 2025 КоперГруппСервис. Все права защищены.</p>
               <div className="flex items-center space-x-4">
                 <a href="https://wa.me/79122410318" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">

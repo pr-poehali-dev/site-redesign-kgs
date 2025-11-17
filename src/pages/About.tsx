@@ -214,13 +214,13 @@ const About = () => {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/50">
-              Более 12 лет на рынке
+              Более 10 лет на рынке
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
               КГС — ваш эксперт в оборудовании и строительстве фундаментов
             </h1>
             <p className="text-white/80 text-lg leading-relaxed">
-              Торгово-производственная компания с более чем 12-летним опытом поставок, проектирования и реализации решений в сфере оборудования и фундаментостроения.
+              Торгово-производственная компания с более чем 10-летним опытом поставок, проектирования и реализации решений в сфере оборудования и фундаментостроения.
             </p>
           </div>
         </div>
@@ -524,47 +524,7 @@ const About = () => {
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
-              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Icon name="Award" className="text-accent" size={32} />
-              </div>
-              <h3 className="font-heading font-semibold text-center mb-2">ISO 9001:2015</h3>
-              <p className="text-muted-foreground text-sm text-center">
-                Система менеджмента качества
-              </p>
-            </Card>
 
-            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
-              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Icon name="FileCheck" className="text-accent" size={32} />
-              </div>
-              <h3 className="font-heading font-semibold text-center mb-2">Сертификат соответствия</h3>
-              <p className="text-muted-foreground text-sm text-center">
-                ТР ТС на производство оборудования
-              </p>
-            </Card>
-
-            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
-              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Icon name="ShieldCheck" className="text-accent" size={32} />
-              </div>
-              <h3 className="font-heading font-semibold text-center mb-2">Декларация ТР ТС</h3>
-              <p className="text-muted-foreground text-sm text-center">
-                О безопасности машин и оборудования
-              </p>
-            </Card>
-
-            <Card className="p-6 hover:shadow-xl transition-all hover:-translate-y-1">
-              <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Icon name="BadgeCheck" className="text-accent" size={32} />
-              </div>
-              <h3 className="font-heading font-semibold text-center mb-2">Членство в СРО</h3>
-              <p className="text-muted-foreground text-sm text-center">
-                Проектирование и строительство
-              </p>
-            </Card>
-          </div>
 
           <Card className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 max-w-4xl mx-auto mt-12">
             <div className="flex flex-col md:flex-row items-center gap-6">
@@ -1243,8 +1203,22 @@ const About = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
               <p>© 2025 КоперГруппСервис. Все права защищены.</p>
+              <div className="flex items-center space-x-4">
+                <a href="https://wa.me/79122410318" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="MessageCircle" size={20} />
+                </a>
+                <a href="https://t.me/+79122410318" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Send" size={20} />
+                </a>
+                <a href="https://vk.com/kgsural" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Share2" size={20} />
+                </a>
+                <a href="https://rutube.ru/channel/37307143/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Video" size={20} />
+                </a>
+              </div>
               <p>ИНН: 6670440671 | ОГРН: 1169658096189</p>
             </div>
           </div>

@@ -586,8 +586,22 @@ const Production = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
               <p>© 2025 КоперГруппСервис. Все права защищены.</p>
+              <div className="flex items-center space-x-4">
+                <a href="https://wa.me/79122410318" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="MessageCircle" size={20} />
+                </a>
+                <a href="https://t.me/+79122410318" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Send" size={20} />
+                </a>
+                <a href="https://vk.com/kgsural" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Share2" size={20} />
+                </a>
+                <a href="https://rutube.ru/channel/37307143/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                  <Icon name="Video" size={20} />
+                </a>
+              </div>
               <p>ИНН: 6670440671 | ОГРН: 1169658096189</p>
             </div>
           </div>
