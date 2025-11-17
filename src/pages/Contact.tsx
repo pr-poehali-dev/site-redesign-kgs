@@ -6,6 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Contact = () => {
   const team = [
@@ -33,6 +34,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">

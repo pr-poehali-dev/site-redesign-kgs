@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { CartButton } from "@/components/CartButton";
 import { useCart } from "@/components/CartContext";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { useState } from "react";
 
 const Parts = () => {
@@ -35,6 +36,7 @@ const Parts = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">

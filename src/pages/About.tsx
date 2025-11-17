@@ -7,6 +7,7 @@ import { useState } from "react";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ConsultationButton } from "@/components/ConsultationButton";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const About = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -164,6 +165,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
