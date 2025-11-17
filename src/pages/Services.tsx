@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
+import { MobileMenu } from "@/components/MobileMenu";
 
 const Services = () => {
   const supervisionSteps = [
@@ -65,9 +66,10 @@ const Services = () => {
               <a href="tel:88006007465" className="text-white hover:text-accent transition-colors text-sm font-medium hidden lg:block">
                 8 (800) 600-74-65
               </a>
-              <Button size="sm" className="btn-gradient text-white">
+              <Button size="sm" className="btn-gradient text-white hidden md:block">
                 Заказать звонок
               </Button>
+              <MobileMenu currentPath="/services" />
             </div>
           </div>
         </div>
@@ -84,9 +86,30 @@ const Services = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
               Услуги
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed mb-8">
               Полный спектр услуг по монтажу, обслуживанию и ремонту сваебойного и бурового оборудования
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-3">
+              <a 
+                href="#supervision" 
+                className="bg-white/10 hover:bg-accent/20 border border-white/20 hover:border-accent/50 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium"
+              >
+                Шефмонтаж оборудования
+              </a>
+              <a 
+                href="#maintenance" 
+                className="bg-white/10 hover:bg-accent/20 border border-white/20 hover:border-accent/50 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium"
+              >
+                Техническое обслуживание
+              </a>
+              <a 
+                href="#guarantee" 
+                className="bg-white/10 hover:bg-accent/20 border border-white/20 hover:border-accent/50 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium"
+              >
+                Гарантия
+              </a>
+            </div>
           </div>
         </div>
       </section>
