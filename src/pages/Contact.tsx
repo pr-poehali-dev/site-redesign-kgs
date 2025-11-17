@@ -146,6 +146,31 @@ const Contact = () => {
               <Card className="p-8 hover:shadow-xl transition-shadow">
                 <div className="flex items-start space-x-4">
                   <div className="bg-accent/10 p-4 rounded-lg flex-shrink-0">
+                    <Icon name="Share2" className="text-accent" size={32} />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-heading font-bold mb-4">Мы в соцсетях</h2>
+                    <div className="flex items-center space-x-4">
+                      <a href="https://wa.me/79122410318" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                        <Icon name="MessageCircle" size={32} />
+                      </a>
+                      <a href="https://t.me/+79122410318" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                        <Icon name="Send" size={32} />
+                      </a>
+                      <a href="https://vk.com/kgsural" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                        <Icon name="Share2" size={32} />
+                      </a>
+                      <a href="https://rutube.ru/channel/37307143/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                        <Icon name="Video" size={32} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 hover:shadow-xl transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-accent/10 p-4 rounded-lg flex-shrink-0">
                     <Icon name="MapPin" className="text-accent" size={32} />
                   </div>
                   <div>

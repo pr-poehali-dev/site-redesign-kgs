@@ -692,66 +692,90 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <Card 
-                key={project.id} 
-                className="overflow-hidden hover:shadow-xl transition-all cursor-pointer group"
-                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
-              >
-                <div className="relative aspect-video overflow-hidden">
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
-                  <Badge className="absolute top-3 right-3 bg-accent text-white border-0">
-                    {project.year}
-                  </Badge>
-                </div>
-                
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-2 line-clamp-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-                  
-                  {selectedProject === project.id && (
-                    <div className="space-y-3 animate-fade-in">
-                      <div className="flex items-start space-x-2">
-                        <Icon name="Package" className="text-accent flex-shrink-0 mt-1" size={16} />
-                        <div className="text-sm">
-                          <div className="font-medium">Оборудование:</div>
-                          <div className="text-muted-foreground">{project.equipment}</div>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-2">
-                        <Icon name="Clock" className="text-accent flex-shrink-0 mt-1" size={16} />
-                        <div className="text-sm">
-                          <div className="font-medium">Срок выполнения:</div>
-                          <div className="text-muted-foreground">{project.duration}</div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  
-                  <Button 
-                    variant="ghost" 
-                    className="w-full mt-4 text-accent hover:text-accent/80 hover:bg-accent/10"
-                  >
-                    {selectedProject === project.id ? "Скрыть детали" : "Подробнее"}
-                    <Icon 
-                      name={selectedProject === project.id ? "ChevronUp" : "ChevronDown"} 
-                      size={16} 
-                      className="ml-2" 
-                    />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Фото 1
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Пример реализованного проекта
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Фото 2
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Пример реализованного проекта
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Фото 3
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Пример реализованного проекта
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                <Icon name="Video" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Видео 1
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Видеообзор проекта
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <Icon name="Video" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Видео 2
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Видеообзор проекта
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-all group">
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                <Icon name="Video" size={64} className="text-muted-foreground" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  Видео 3
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Видеообзор проекта
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="text-center mt-12">
