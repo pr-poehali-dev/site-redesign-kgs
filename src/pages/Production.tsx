@@ -32,13 +32,6 @@ const Production = () => {
     "Обеспечиваем строгий контроль качества на каждом этапе"
   ];
 
-  const rvdFeatures = [
-    { icon: "Shield", text: "Высокая износостойкость" },
-    { icon: "Gauge", text: "Стабильность давления" },
-    { icon: "Timer", text: "Долговечность в интенсивной эксплуатации" },
-    { icon: "Award", text: "Соответствие промышленным стандартам" }
-  ];
-
   const machtCapabilities = [
     "Бурение",
     "Забивка свай",
@@ -185,11 +178,8 @@ const Production = () => {
               <a href="#production-cycle" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
                 Полный цикл производства
               </a>
-              <a href="#rvd" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Рукава высокого давления
-              </a>
               <a href="#masts" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Копровые мачты
+                Универсальность оборудования
               </a>
               <a href="#modernization" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
                 Модернизация техники
@@ -271,47 +261,10 @@ const Production = () => {
         </div>
       </section>
 
-      <section id="rvd" className="py-16 md:py-24 bg-muted/30">
+      <section id="masts" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
-              <div>
-                <Badge className="mb-4 bg-accent/10 text-accent border-accent/50">
-                  Производство РВД
-                </Badge>
-                <h2 className="text-3xl font-heading font-bold mb-6">
-                  Рукава высокого давления
-                </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Помимо основного оборудования, компания производит рукава высокого давления любого диаметра и длины.
-                </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  В производстве используются европейские материалы, что гарантирует высокое качество и надёжность.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {rvdFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="bg-accent/10 p-2 rounded">
-                        <Icon name={feature.icon} className="text-accent" size={20} />
-                      </div>
-                      <span className="text-sm font-medium">{feature.text}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground mt-6 italic">
-                  Каждый РВД проходит обязательный контроль и испытания перед отгрузкой.
-                </p>
-              </div>
-              <div className="relative">
-                <img 
-                  src="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/d0357e51-fc69-4bd7-9feb-b9f4924208f0.jpg"
-                  alt="Производство РВД"
-                  className="rounded-lg shadow-xl w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-
-            <div id="masts" className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
               <div className="order-2 md:order-1 relative">
                 <img 
                   src="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/409c5f64-ba5d-4fa6-ba0b-315c94eea0dc.jpg"
@@ -346,6 +299,64 @@ const Production = () => {
                   <p className="text-sm text-muted-foreground">
                     Это позволяет использовать уже имеющуюся технику в новых задачах без покупки нового оборудования, снижая затраты заказчика.
                   </p>
+                </Card>
+              </div>
+            </div>
+
+            <div className="mt-16">
+              <h3 className="text-2xl font-heading font-bold mb-8 text-center">
+                Фотогалерея
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <span className="text-muted-foreground font-medium">Фото 1</span>
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Копровая мачта в работе</p>
+                  </CardContent>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <span className="text-muted-foreground font-medium">Фото 2</span>
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Установка оборудования</p>
+                  </CardContent>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <span className="text-muted-foreground font-medium">Фото 3</span>
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Готовое оборудование</p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <Icon name="PlayCircle" size={48} className="text-muted-foreground" />
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Видео 1: Процесс монтажа</p>
+                  </CardContent>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <Icon name="PlayCircle" size={48} className="text-muted-foreground" />
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Видео 2: Оборудование в действии</p>
+                  </CardContent>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-xl transition-all">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
+                    <Icon name="PlayCircle" size={48} className="text-muted-foreground" />
+                  </div>
+                  <CardContent className="p-4">
+                    <p className="text-sm text-muted-foreground">Видео 3: Результаты работ</p>
+                  </CardContent>
                 </Card>
               </div>
             </div>

@@ -7,22 +7,22 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 225 30% 22%;
+    --foreground: 222 46% 28%;
 
     --card: 0 0% 100%;
-    --card-foreground: 225 30% 22%;
+    --card-foreground: 222 46% 28%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 225 30% 22%;
+    --popover-foreground: 222 46% 28%;
 
-    --primary: 225 30% 22%;
+    --primary: 222 46% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 225 30% 30%;
+    --secondary: 222 46% 35%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 225 30% 35%;
+    --muted-foreground: 222 46% 40%;
 
     --accent: 33 84% 56%;
     --accent-foreground: 0 0% 100%;
@@ -54,22 +54,22 @@
   }
 
   .dark {
-    --background: 225 30% 15%;
+    --background: 222 46% 15%;
     --foreground: 0 0% 98%;
 
-    --card: 225 30% 20%;
+    --card: 222 46% 20%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 225 30% 20%;
+    --popover: 222 46% 20%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 225 30% 22%;
+    --primary: 222 46% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 225 30% 30%;
+    --secondary: 222 46% 35%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 225 30% 25%;
+    --muted: 222 46% 25%;
     --muted-foreground: 215 20% 70%;
 
     --accent: 33 84% 56%;
@@ -78,16 +78,16 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 225 30% 30%;
-    --input: 225 30% 30%;
+    --border: 222 46% 30%;
+    --input: 222 46% 30%;
     --ring: 33 84% 56%;
-    --sidebar-background: 225 30% 20%;
+    --sidebar-background: 222 46% 20%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 225 30% 40%;
+    --sidebar-primary: 222 46% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 30% 25%;
+    --sidebar-accent: 222 46% 25%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 225 30% 30%;
+    --sidebar-border: 222 46% 30%;
     --sidebar-ring: 33 84% 56%;
   }
 }
