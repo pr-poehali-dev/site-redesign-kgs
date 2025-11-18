@@ -175,20 +175,17 @@ const Production = () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              <a href="#production-cycle" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Полный цикл производства
-              </a>
               <a href="#masts" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Универсальность оборудования
+                Копровые мачты для кранов и экскаваторов
               </a>
               <a href="#modernization" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Модернизация техники
+                Модернизация техники для забивки свай
               </a>
               <a href="#engineering" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Проектирование
+                Проектирование бурового и свайного оборудования
               </a>
               <a href="#delivery" className="px-4 py-2 bg-white/10 hover:bg-accent hover:text-white text-white rounded-lg transition-all hover:scale-105 text-sm backdrop-blur-sm border border-white/20">
-                Доставка
+                Доставка оборудования и спецтехники
               </a>
             </div>
           </div>
@@ -203,7 +200,7 @@ const Production = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Одним из ключевых направлений деятельности компании является полный цикл производства навесного оборудования для фундаментного строения, а также изготовление металлоконструкций любой сложности по чертежам заказчика.
+                Одним из ключевых направлений деятельности компании является полный цикл производства оборудования для фундаментостроения, а также изготовление металлоконструкций любой сложности по чертежам заказчика.
               </p>
               <p>
                 Мы создаём решения, соответствующие техническим нормам, инженерным требованиям и задачам конкретного проекта.
@@ -274,7 +271,7 @@ const Production = () => {
               </div>
               <div className="order-1 md:order-2">
                 <Badge className="mb-4 bg-accent/10 text-accent border-accent/50">
-                  Универсальность оборудования
+                  Копровые мачты
                 </Badge>
                 <h2 className="text-3xl font-heading font-bold mb-6">
                   Копровые мачты для кранов и экскаваторов
@@ -471,13 +468,13 @@ const Production = () => {
 
             <Card className="p-8 bg-gradient-to-br from-primary to-accent/20 text-white text-center">
               <p className="text-lg mb-6">
-                Компания «КоперГруппСервис» — это инженерная экспертиза, современное производство и практический опыт, позволяющие создавать универсальное, надёжное и экономически выгодное оборудование для фундаментного строения.
+                Компания «КоперГруппСервис» — это инженерная экспертиза, современное производство и практический опыт, позволяющие создавать универсальное, надёжное и экономически выгодное оборудование для свайного фундаментостроения.
               </p>
               <p className="text-xl font-semibold mb-6">
                 Готовы обсудить задачу или рассчитать стоимость оборудования?
               </p>
               <p className="text-white/90 mb-8">
-                Оставьте заявку — инженер «КоперГруппСервис» свяжется с вами, уточнит технические требования и предложит оптимальное решение под ваш проект.
+                Оставьте заявку — менеджер «КоперГруппСервис» свяжется с вами, уточнит технические требования и предложит оптимальное решение под ваш проект.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="btn-gradient text-white">
@@ -503,7 +500,7 @@ const Production = () => {
                 Доставка оборудования и спецтехники
               </h2>
               <p className="text-muted-foreground text-lg">
-                ООО «КоперГруппСервис» обеспечивает покупателю быструю, надёжную и безопасную доставку оборудования и спецтехники — от проверки товара у производителя до выгрузки на объекте заказчика.
+                Доставка оборудования и спецтехники в минимальные сроки. ООО «КоперГруппСервис» обеспечивает покупателю быструю, надёжную и безопасную доставку оборудования и спецтехники — от проверки товара у завода-изготовителя до выгрузки на объекте заказчика.
               </p>
             </div>
 

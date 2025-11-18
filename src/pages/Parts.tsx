@@ -112,7 +112,7 @@ const Parts = () => {
                 Для максимальной скорости доставки мы организовали склад в Екатеринбурге, где всегда в наличии наиболее востребованные позиции.
               </p>
               <p>
-                Мы также развиваем альтернативные каналы поставок качественных аналоговых запчастей, позволяя владельцам импортной сельскохозяйственной, строительной и коммунальной техники получать надёжные детали по доступной цене, без простоев и задержек.
+                Мы также развиваем альтернативные каналы поставок качественных аналоговых запчастей, позволяя владельцам импортной строительной техники получать надёжные детали по доступной цене, без простоев и задержек.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ const Parts = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-lg mb-2 text-primary">
-                    Поддержка как для импортной, так и отечественной техники
+                    Запчасти как для импортной, так и отечественной техники
                   </h3>
                 </div>
               </CardContent>
@@ -217,8 +217,8 @@ const Parts = () => {
                   <Icon name="Mail" size={32} className="text-primary" />
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">Email</h3>
-                <a href="mailto:info@kgs-ural.ru" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors block mb-2">
-                  info@kgs-ural.ru
+                <a href="mailto:service@kgs-ural.ru" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors block mb-2">
+                  service@kgs-ural.ru
                 </a>
                 <p className="text-sm text-muted-foreground mb-4">Ответим в течение 1 часа</p>
                 <Button size="lg" className="btn-gradient-reverse text-white w-full">
