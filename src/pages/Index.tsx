@@ -178,7 +178,7 @@ const Index = () => {
                 Оборудование и машины для строительства свайных фундаментов
               </h1>
               <p className="text-white/80 text-base md:text-lg mb-4 md:mb-6 leading-relaxed uppercase font-semibold">
-                ПРОИЗВОДСТВО, ПОСТАВКА И СЕРВИС
+                ПРОИЗВОДСТВО, ПОСТАВКА, СЕРВИС
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8">

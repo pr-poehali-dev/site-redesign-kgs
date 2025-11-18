@@ -315,7 +315,7 @@ const About = () => {
               Задачи компании
             </h3>
             <p className="text-muted-foreground mb-6 text-center">
-              Сопровождаем каждый этап работы и поставки оборудования заказчику:
+              Сопровождаем каждый этап работы по поставкам оборудования заказчику:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
@@ -468,7 +468,7 @@ const About = () => {
               Производственный цех
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Собственная производственная площадка в г. Берёзовский, Свердловская область
+              Производственная площадка в г. Берёзовский, Свердловская область
             </p>
           </div>
 
@@ -483,31 +483,31 @@ const About = () => {
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground"><strong>Площадь цеха:</strong> 250 кв.м.</span>
+                  <span className="text-muted-foreground">2 производственных цеха площадью 1000 и 1800 кв.м.</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Станок плазменной резки с ЧПУ 2,5 × 6,0 м</span>
+                  <span className="text-muted-foreground">2 станка плазменной резки с ЧПУ 2,5 × 6,0 м</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Четыре сварочных поста (полуавтомат)</span>
+                  <span className="text-muted-foreground">12 сварочных постов (полуавтомат)</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Фрезерный станок с ЧПУ</span>
+                  <span className="text-muted-foreground">Фрезерные станки с ЧПУ</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Токарный станок с ЧПУ</span>
+                  <span className="text-muted-foreground">Токарные станки с ЧПУ</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Гибочный станок</span>
+                  <span className="text-muted-foreground">Гибочные станки</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Кран-балка грузоподъёмностью 5 т</span>
+                  <span className="text-muted-foreground">Кран-балки грузоподъёмностью 5 т</span>
                 </div>
               </div>
             </Card>
@@ -525,21 +525,16 @@ const About = () => {
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Icon name="Zap" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Быстрый ремонт техники</span>
+                  <span className="text-muted-foreground">быстрый ремонт техники</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="Clock" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Минимизацию простоев</span>
+                  <span className="text-muted-foreground">минимизацию простоев</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Icon name="TrendingDown" className="text-accent flex-shrink-0 mt-1" size={18} />
-                  <span className="text-muted-foreground">Снижение затрат наших клиентов</span>
+                  <span className="text-muted-foreground">снижение затрат наших клиентов</span>
                 </div>
-              </div>
-              <div className="mt-6 p-4 bg-accent/5 rounded-lg border border-accent/20">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Изготавливаем:</strong> стандартные и индивидуальные металлоконструкции по вашим чертежам
-                </p>
               </div>
             </Card>
           </div>
@@ -678,47 +673,18 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <Card className="p-8 md:p-12">
-              <div className="text-center mb-8">
+              <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">
                   Работаем по всей России и в странах СНГ
                 </h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  Поставим оборудование и запчасти в любую точку
-                </p>
               </div>
 
-              <div className="relative aspect-[3/2] md:aspect-[16/9] mb-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/2] md:aspect-[16/9] bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg overflow-hidden">
                 <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Map_of_Russia_-_Russian_Federation.svg/2560px-Map_of_Russia_-_Russian_Federation.svg.png"
                   alt="Карта России - география работы КГС"
                   className="w-full h-full object-contain p-4"
                 />
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center p-4 bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg">
-                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="Truck" className="text-accent" size={24} />
-                  </div>
-                  <h3 className="font-heading font-semibold mb-2">Доставка по РФ</h3>
-                  <p className="text-sm text-muted-foreground">ЖД, авто и морским транспортом</p>
-                </div>
-
-                <div className="text-center p-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg">
-                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="Wrench" className="text-accent" size={24} />
-                  </div>
-                  <h3 className="font-heading font-semibold mb-2">Шефмонтаж на объекте</h3>
-                  <p className="text-sm text-muted-foreground">Выезд специалистов в любой регион</p>
-                </div>
-
-                <div className="text-center p-4 bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg">
-                  <div className="bg-accent/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="Package" className="text-accent" size={24} />
-                  </div>
-                  <h3 className="font-heading font-semibold mb-2">Запчасти в наличии</h3>
-                  <p className="text-sm text-muted-foreground">Оперативная отправка по России</p>
-                </div>
               </div>
             </Card>
           </div>
@@ -787,9 +753,6 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               Наш офис
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Посетите нас по адресу в Екатеринбурге или свяжитесь удобным способом
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
