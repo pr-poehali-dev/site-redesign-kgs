@@ -395,37 +395,37 @@ const Production = () => {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-primary to-primary/80 text-white">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-heading font-bold mb-4">
-                  Компания «КоперГруппСервис»
-                </h3>
-                <p className="text-white/90 text-lg mb-6">
-                  Это инженерная экспертиза, современное производство и практический опыт, позволяющие создавать универсальное, надёжное и экономически выгодное оборудование для фундаментного строения.
-                </p>
-                
-                <div className="border-t border-white/20 pt-6">
-                  <h4 className="text-xl font-semibold mb-4">
+            <div className="space-y-8">
+              <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                    Компания «КоперГруппСервис»
+                  </h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Это инженерная экспертиза, современное производство и практический опыт, позволяющие создавать универсальное, надёжное и экономически выгодное оборудование для фундаментного строения.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-primary to-primary/90 text-white">
+                <CardContent className="p-8">
+                  <h4 className="text-2xl font-heading font-bold mb-4">
                     Готовы обсудить задачу или рассчитать стоимость оборудования?
                   </h4>
-                  <p className="text-white/90 mb-6">
+                  <p className="text-white/90 text-lg mb-6">
                     Оставьте заявку — менеджер «КоперГруппСервис» свяжется с вами, уточнит технические требования и предложит оптимальное решение под ваш проект.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button className="bg-accent hover:bg-accent/90 text-white">
                       Отправить заявку
                     </Button>
-                    <a 
-                      href="mailto:service@kgs-ural.ru" 
-                      className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors backdrop-blur-sm border border-white/30"
-                    >
-                      <Icon name="Mail" size={20} className="mr-2" />
-                      service@kgs-ural.ru
-                    </a>
+                    <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30">
+                      Получить консультацию
+                    </Button>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
