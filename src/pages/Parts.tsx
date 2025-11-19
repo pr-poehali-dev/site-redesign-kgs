@@ -9,6 +9,7 @@ import { CartButton } from "@/components/CartButton";
 import { useCart } from "@/components/CartContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { useState } from "react";
+import { SEO } from "@/components/SEO";
 
 const Parts = () => {
   const { addToCart } = useCart();
@@ -36,6 +37,14 @@ const Parts = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Запчасти для сваебойного оборудования — оригинальные комплектующие | КГС"
+        description="Большой склад запчастей для сваебойного оборудования. Оригинальные комплектующие для молотов, копровых мачт, буровых установок. Быстрая доставка по России. Консультация по подбору."
+        keywords="запчасти для сваебойного оборудования, комплектующие для молотов, запчасти копровых мачт, детали буровых установок, купить запчасти"
+        canonical="https://kgs-ural.ru/parts"
+        ogTitle="Запчасти для сваебойного оборудования"
+        ogDescription="Оригинальные запчасти, большой склад, быстрая доставка. Консультация по подбору."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

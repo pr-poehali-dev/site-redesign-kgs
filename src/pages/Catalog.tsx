@@ -5,6 +5,7 @@ import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { SEO } from "@/components/SEO";
 
 const Catalog = () => {
   const categories = [
@@ -93,6 +94,14 @@ const Catalog = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Каталог сваебойного оборудования — купить копровые мачты, молоты, буровые | КГС"
+        description="Большой выбор сваебойного оборудования: копровые мачты, гидравлические и дизельные молоты, буровые установки, вибропогружатели. Прямые поставки от производителей. Оптимальные цены."
+        keywords="купить сваебойное оборудование, копровые мачты цена, сваебойные молоты купить, буровые установки для свай, вибропогружатели, каталог свайного оборудования"
+        canonical="https://kgs-ural.ru/catalog"
+        ogTitle="Каталог сваебойного оборудования КГС"
+        ogDescription="Широкий выбор оборудования для свайных работ. Прямые поставки, доступные цены, гарантия качества."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

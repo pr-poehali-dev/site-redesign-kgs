@@ -7,6 +7,7 @@ import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const team = [
@@ -34,6 +35,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Контакты КГС — связаться с поставщиком сваебойного оборудования"
+        description="Контакты компании КГС: телефон 8 (800) 600-74-65, email service@kgs-ural.ru. Офис в Екатеринбурге. Бесплатная консультация по оборудованию. Работаем по всей России и СНГ."
+        keywords="контакты кгс, купить сваебойное оборудование екатеринбург, телефон поставщика, консультация по оборудованию"
+        canonical="https://kgs-ural.ru/contact"
+        ogTitle="Контакты КГС"
+        ogDescription="Свяжитесь с нами: 8 (800) 600-74-65, бесплатная консультация по оборудованию."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

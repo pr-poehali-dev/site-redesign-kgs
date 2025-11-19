@@ -8,6 +8,7 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { ConsultationButton } from "@/components/ConsultationButton";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -165,6 +166,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="О компании КГС — 10+ лет в производстве сваебойного оборудования"
+        description="КоперГруппСервис — надежный поставщик сваебойного оборудования с 2013 года. 350+ клиентов по России и СНГ. Собственное производство в Екатеринбурге. Гарантия качества и сроков."
+        keywords="о компании кгс, производитель сваебойного оборудования, поставщик копровых мачт, история компании, производство екатеринбург"
+        canonical="https://kgs-ural.ru/about"
+        ogTitle="О компании КГС — производство сваебойного оборудования"
+        ogDescription="10+ лет опыта, 350+ клиентов, собственное производство. Надежный партнер в поставках свайного оборудования."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

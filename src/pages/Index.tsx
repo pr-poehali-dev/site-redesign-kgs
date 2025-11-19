@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   const equipment = [
@@ -109,6 +110,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="КГС — Сваебойное оборудование | Производство, шефмонтаж, сервис"
+        description="Производство и поставка сваебойного оборудования, буровых установок, копровых мачт. Шефмонтаж, техобслуживание. Работаем по всей России и СНГ. 10+ лет опыта. 350+ клиентов."
+        keywords="сваебойное оборудование, копровые мачты, буровые установки, сваебойные молоты, шефмонтаж оборудования, купить сваебойное оборудование, производство свайного оборудования"
+        canonical="https://kgs-ural.ru/"
+        ogImage="https://cdn.poehali.dev/projects/ac018ba4-20ce-4648-95d6-1d6c97ae54c8/files/og-image-1763364751842.png"
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

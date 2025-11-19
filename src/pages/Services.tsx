@@ -5,6 +5,7 @@ import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { SEO } from "@/components/SEO";
 
 const Services = () => {
   const supervisionProcesses = [
@@ -32,6 +33,14 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Услуги по шефмонтажу и обслуживанию сваебойного оборудования | КГС"
+        description="Шефмонтаж и пусконаладка сваебойного оборудования по России и СНГ. Техническое обслуживание, гарантия, обучение персонала. Выезд специалистов на объект. 60+ шефмонтажей."
+        keywords="шефмонтаж сваебойного оборудования, пусконаладка буровых установок, техническое обслуживание свайной техники, ремонт сваебойных молотов, обучение операторов"
+        canonical="https://kgs-ural.ru/services"
+        ogTitle="Шефмонтаж и обслуживание сваебойного оборудования"
+        ogDescription="Профессиональный шефмонтаж, пусконаладка и техобслуживание сваебойной техники. Гарантия качества."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">

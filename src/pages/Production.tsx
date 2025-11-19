@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import { SEO } from "@/components/SEO";
 
 const Production = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -160,6 +161,14 @@ const Production = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Производство и доставка сваебойного оборудования по России и СНГ | КГС"
+        description="Собственное производство металлоконструкций в Екатеринбурге. Модернизация техники под задачи клиента. Логистика по всей России и СНГ. Гарантия качества и сроков доставки."
+        keywords="производство сваебойного оборудования, доставка копровых мачт, изготовление металлоконструкций, модернизация техники, логистика оборудования"
+        canonical="https://kgs-ural.ru/production"
+        ogTitle="Производство и доставка сваебойного оборудования"
+        ogDescription="Собственное производство, модернизация под задачи, логистика по России и СНГ."
+      />
       <ScrollToTop />
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="container mx-auto px-4">
