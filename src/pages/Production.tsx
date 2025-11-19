@@ -5,8 +5,44 @@ import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 const Production = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('Форма отправлена:', formData);
+      setSubmitStatus('success');
+      setFormData({ name: '', phone: '', email: '', message: '' });
+      setTimeout(() => {
+        setIsDialogOpen(false);
+        setSubmitStatus('idle');
+      }, 2000);
+    } catch (error) {
+      console.error('Ошибка отправки:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const capabilities = [
     {
       icon: "Ruler",
@@ -416,10 +452,17 @@ const Production = () => {
                     Оставьте заявку — менеджер «КоперГруппСервис» свяжется с вами, уточнит технические требования и предложит оптимальное решение под ваш проект.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-accent hover:bg-accent/90 text-white">
+                    <Button 
+                      onClick={() => setIsDialogOpen(true)}
+                      className="bg-accent hover:bg-accent/90 text-white"
+                    >
                       Отправить заявку
                     </Button>
-                    <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30">
+                    <Button 
+                      onClick={() => setIsDialogOpen(true)}
+                      variant="outline" 
+                      className="bg-white/10 hover:bg-white/20 text-white border-white/30"
+                    >
                       Получить консультацию
                     </Button>
                   </div>
@@ -564,6 +607,103 @@ const Production = () => {
           </div>
         </div>
       </footer>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-heading font-bold text-primary">
+              Оставить заявку
+            </DialogTitle>
+            <DialogDescription>
+              Заполните форму, и наш менеджер свяжется с вами в ближайшее время
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                Имя *
+              </label>
+              <Input
+                id="name"
+                type="text"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="Введите ваше имя"
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                Телефон *
+              </label>
+              <Input
+                id="phone"
+                type="tel"
+                required
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                placeholder="+7 (___) ___-__-__"
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <Input
+                id="email"
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                placeholder="example@mail.ru"
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                Сообщение
+              </label>
+              <Textarea
+                id="message"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                placeholder="Опишите вашу задачу или вопрос"
+                className="w-full min-h-[100px]"
+              />
+            </div>
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-2 text-green-800">
+                <Icon name="CheckCircle2" size={20} />
+                <span>Заявка успешно отправлена!</span>
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-2 text-red-800">
+                <Icon name="AlertCircle" size={20} />
+                <span>Ошибка отправки. Попробуйте позже.</span>
+              </div>
+            )}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="btn-gradient text-white flex-1"
+              >
+                {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setIsDialogOpen(false)}
+                className="flex-1"
+              >
+                Отменить
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
