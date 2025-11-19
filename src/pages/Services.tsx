@@ -104,13 +104,7 @@ const Services = () => {
                 href="#maintenance" 
                 className="bg-white/10 hover:bg-accent/20 border-2 border-white/30 hover:border-accent/70 text-white px-6 py-3 rounded-lg transition-all text-sm md:text-base font-bold shadow-lg hover:shadow-xl"
               >
-                Техническое обслуживание
-              </a>
-              <a 
-                href="#training" 
-                className="bg-white/10 hover:bg-accent/20 border-2 border-white/30 hover:border-accent/70 text-white px-6 py-3 rounded-lg transition-all text-sm md:text-base font-bold shadow-lg hover:shadow-xl"
-              >
-                Консультация и обучение
+                Техническое обслуживание и обучение
               </a>
               <a 
                 href="#guarantee" 
@@ -212,10 +206,10 @@ const Services = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-accent/10 text-accent border-accent/50">
-                Техническое обслуживание
+                Техническое обслуживание и обучение
               </Badge>
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                Обслуживание спецтехники и оборудования
+                Обслуживание спецтехники и обучение персонала
               </h2>
               <p className="text-xl text-accent font-semibold">
                 Надёжный сервис для вашей техники
@@ -263,51 +257,16 @@ const Services = () => {
         </div>
       </section>
 
-      <section id="training" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4 bg-accent/10 text-accent border-accent/50">
-                Консультация и обучение
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                Консультации по техническому обслуживанию и правильной эксплуатации техники
-              </h2>
-            </div>
-
-            <Card className="p-8 mb-8">
-              <h3 className="text-xl font-heading font-bold mb-4">Почему важно обучение:</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Неподготовленный оператор может допустить ошибки, которые приведут к неисправностям или аварийным ситуациям. Обучение механиков и операторов позволяет избежать поломок, повысить безопасность и продлить срок службы оборудования.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Наши специалисты знают специфику каждой модели техники и умеют находить решение даже в нестандартных ситуациях.
-              </p>
-            </Card>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="GraduationCap" className="text-accent" size={32} />
-                </div>
-                <h4 className="font-heading font-semibold mb-2">Обучение операторов</h4>
-                <p className="text-sm text-muted-foreground">На месте эксплуатации техники</p>
-              </Card>
-
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="MessageSquare" className="text-accent" size={32} />
-                </div>
-                <h4 className="font-heading font-semibold mb-2">Консультации</h4>
-                <p className="text-sm text-muted-foreground">По эксплуатации и обслуживанию</p>
-              </Card>
-
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="ShieldCheck" className="text-accent" size={32} />
-                </div>
-                <h4 className="font-heading font-semibold mb-2">Повышение безопасности</h4>
-                <p className="text-sm text-muted-foreground">Предотвращение аварийных ситуаций</p>
+            <div className="mt-10">
+              <h3 className="text-2xl font-heading font-bold mb-6 text-center">Консультации и обучение персонала</h3>
+              <Card className="p-8">
+                <h4 className="text-xl font-heading font-bold mb-4">Почему важно обучение:</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Неподготовленный оператор может допустить ошибки, которые приведут к неисправностям или аварийным ситуациям. Обучение механиков и операторов позволяет избежать поломок, повысить безопасность и продлить срок службы оборудования.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Наши специалисты знают специфику каждой модели техники и умеют находить решение даже в нестандартных ситуациях.
+                </p>
               </Card>
             </div>
           </div>
@@ -340,17 +299,14 @@ const Services = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-white text-gray-900">
-              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <Icon name="Mail" className="text-accent" size={32} />
-                <div className="text-center md:text-left">
-                  <p className="text-sm text-muted-foreground mb-1">Связь с сервисным менеджером</p>
-                  <a href="mailto:service@kgs-ural.ru" className="text-xl font-semibold text-accent hover:underline">
-                    service@kgs-ural.ru
-                  </a>
-                </div>
-              </div>
-            </Card>
+            <div className="flex justify-center">
+              <a href="mailto:service@kgs-ural.ru">
+                <Button size="lg" className="btn-gradient text-white">
+                  <Icon name="Mail" className="mr-2" size={20} />
+                  Связаться с сервисным менеджером
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -363,7 +319,7 @@ const Services = () => {
                 Нужна консультация?
               </h2>
               <p className="text-muted-foreground mb-8 text-lg">
-                Свяжитесь с нами для обсуждения деталей и получения коммерческого предложения
+                Свяжитесь с нами уже сегодня
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
